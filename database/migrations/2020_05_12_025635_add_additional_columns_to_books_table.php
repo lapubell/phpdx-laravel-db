@@ -14,9 +14,9 @@ class AddAdditionalColumnsToBooksTable extends Migration
     public function up()
     {
         Schema::table('books', function (Blueprint $table) {
-            $table->string("title");
-            $table->text("description")->nullable();
-            $table->integer("pages")->default(0);
+            $table->string("title")->after("id");
+            $table->text("description")->nullable()->after("title");
+            $table->integer("pages")->default(0)->after("description");
         });
     }
 
