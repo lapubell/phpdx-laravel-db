@@ -20,3 +20,5 @@ php artisan make:migration add_additional_columns_to_books_table
 Notice how the static method on the `Schema` class has changed from `::create` to `::table`. Also note how the closures inside both the `up` and `down` methods are empty. This `//` is a little hint that you'll find all over laravel. It means "put your code here to do something".
 
 The idea behind the `up` and `down` methods are helping you keep your database structure consitant. Did you see how the `down` method in the create migration destroyed the table, while the `up` method created it? We should do the same when we write our own migrations.
+
+Let's run that and see the new columns appear in the `books` table.
