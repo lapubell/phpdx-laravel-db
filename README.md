@@ -22,3 +22,14 @@ Notice how the static method on the `Schema` class has changed from `::create` t
 The idea behind the `up` and `down` methods are helping you keep your database structure consitant. Did you see how the `down` method in the create migration destroyed the table, while the `up` method created it? We should do the same when we write our own migrations.
 
 Let's run that and see the new columns appear in the `books` table.
+
+# Factories
+
+Factories are exactly what they sound like-small bits of code that pump out objects. They are like assembly lines and you can configure them many different ways, but they all start with a model. Let's create that model now and then create a factory that is associated with it:
+
+```
+php artisan make:model Book
+php artisan make:factory BookFactory --model Book
+```
+
+Now that we have a model that works with the migration we've created we should be able to create some DB records pretty easy. Inside a `tinker` session try running `\App\Book::create()`. You should get an error, because we haven't given any data to laravel to create this new `Book` so it is trying to use the defaults from the database migration. The `title` field doesn't have a default value, so you get a database exception. Here is where a factory can come in handy.
