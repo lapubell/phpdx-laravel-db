@@ -33,3 +33,5 @@ php artisan make:factory BookFactory --model Book
 ```
 
 Now that we have a model that works with the migration we've created we should be able to create some DB records pretty easy. Inside a `tinker` session try running `\App\Book::create()`. You should get an error, because we haven't given any data to laravel to create this new `Book` so it is trying to use the defaults from the database migration. The `title` field doesn't have a default value, so you get a database exception. Here is where a factory can come in handy.
+
+Optionally, we can loosen some of the safe guards that Laravel has out of the box. This will allow us to pass certain items into the `create` method on the Book model to make our lives easier. This can lead to simple mistakes or security concerns, but I do this all the time. :)
