@@ -42,3 +42,5 @@ Factory states are pretty cool too. If we have a model that we can think of in m
 php artisan make:model Library --migration
 php artisan make:migration add_library_columns_to_books_table
 ```
+
+Now let's just set a couple of methods to make the model relations work.
