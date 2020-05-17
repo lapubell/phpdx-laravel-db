@@ -15,7 +15,7 @@ class AddLibraryColumnsToBooksTable extends Migration
     {
         Schema::table('books', function (Blueprint $table) {
             $table->integer("library_id")->after("id")->nullable();
-            $table->timestamp("checked_out_at")->after("pages");
+            $table->timestamp("checked_out_at")->after("pages")->nullable()->default(null);
         });
     }
 
