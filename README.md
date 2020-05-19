@@ -58,3 +58,5 @@ This works and shows us our manually created items in a very simplistic HTML lay
 ```
 php artisan make:seed LibrarySeeder
 ```
+
+And finally, because we are not ever going to actually run this seeder in prod, let's make a few adjustments to make our lives easier.
