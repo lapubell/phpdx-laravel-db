@@ -60,3 +60,13 @@ php artisan make:seed LibrarySeeder
 ```
 
 And finally, because we are not ever going to actually run this seeder in prod, let's make a few adjustments to make our lives easier.
+
+## Final notes
+
+* I showed how easy it was to paginate the library results, can you paginate the book results?
+* Be sure to not inline style in a large project
+* Check out the official laravel docs for more on this topic, they really are the best technical docs I've seen in a long long time...
+    * https://laravel.com/docs/7.x/database
+    * https://laravel.com/docs/7.x/migrations
+    * https://laravel.com/docs/7.x/seeding
+    * https://laravel.com/docs/7.x/database-testing#generating-factories
