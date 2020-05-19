@@ -16,3 +16,6 @@ use Illuminate\Support\Facades\Route;
 Route::get('/', function () {
     return view('welcome');
 });
+
+Route::get("/libraries", "LibraryController@index");
+Route::get("/library/{id}", "LibraryController@show");

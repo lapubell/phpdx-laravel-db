@@ -46,3 +46,9 @@ php artisan make:migration add_library_columns_to_books_table
 Now let's just set a couple of methods to make the model relations work.
 
 Next, let's create two factory states for the `Book` model. If a book has a `library_id` then that means it belongs to a library, so let's create a `libraryBook` state. Also, a book without a timestamp in the `checked_out_at` column means it's `available`, and if there is a timestamp then the book is in a checked out state.
+
+This all looks pretty great, so let's build a quick view or 2 to see all the libraries and their books. Run this command and then add in a few new route bindings and controller actions/views.
+
+```
+php artisan make:controller LibraryController
+```
