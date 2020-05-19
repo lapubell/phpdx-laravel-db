@@ -52,3 +52,9 @@ This all looks pretty great, so let's build a quick view or 2 to see all the lib
 ```
 php artisan make:controller LibraryController
 ```
+
+This works and shows us our manually created items in a very simplistic HTML layout. Now let's see the power of seeders to quickly fill a database with test data.
+
+```
+php artisan make:seed LibrarySeeder
+```
